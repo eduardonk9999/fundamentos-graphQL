@@ -6,8 +6,15 @@ const server = new ApolloServer({
       hello: String
     }
   `,
+  resolvers: {
+    Query: {
+      hello: () => {
+        return 'Hello again';
+      },
+    },
+  },
 });
 
 server.listen(4003).then(({ url }) => {
-  console.log(`Server listening on url ${url}`);
+  console.log(`Server listening on url ${url}!!!`);
 });

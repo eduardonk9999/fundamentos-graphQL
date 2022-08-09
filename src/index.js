@@ -9,7 +9,7 @@ const server = new ApolloServer({
   resolvers: {
     Query: {
       hello: () => {
-        return 'Hello again';
+        return 'Hello again!!!';
       },
     },
   },
